@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Maxstr75/socket.io-chat#readme",
   "dependencies": {
+    "nodemon": "^2.0.20",
     "uuid": "^9.0.0",
     "ws": "^8.10.0"
   }

@@ -11,7 +11,9 @@ wss.on("connection", (ws) => {
 
   console.log(`New client ${id}`);
 
-  ws.on("message", (rawMessage) => {});
+  ws.on("message", (rawMessage) => {
+    console.log(rawMessage);
+  });
 
   ws.on("close", () => {
     delete clients[id]; // клиент закрылся

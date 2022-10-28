@@ -18,6 +18,7 @@
       const ws = new WebSocket("ws://127.0.0.1:8000");
       ws.onmessage = (message) => {};
       const send = (event) => {
+        event.preventDefault();
         const name = document.getElementById("name").value;
         const massage = document.getElementById("message").value;
         ws.send(
@@ -26,6 +27,7 @@
             message,
           })
         );
+        return false;
       };
       const formEl = document.getElementById("messageForm");
       form.addEventListener("submit", send);
